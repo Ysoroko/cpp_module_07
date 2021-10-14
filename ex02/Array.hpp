@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 17:12:03 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/14 17:47:18 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/10/14 18:03:04 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,16 @@ class Array
 		}
 
 		// [] operator
-		T	operator[](int i)
+		T	& operator[](unsigned int i)
 		{
 			if (i < 0 || i > this->_n)
 				throw (std::exception());
+			else
+				return (*(_t + i));
 		}
 		
 		// Getters:
-		T 				getT( void ) const { return (_t); }
+		T 				*getT( void ) const { return (_t); }
 		unsigned int	size( void ) const { return (_n); }
 	private:
 		T				*_t;
@@ -71,7 +73,8 @@ class Array
 template< typename T >
 std::ostream & operator<<(std::ostream & o, Array< T > const & ref)
 {
-	std::cout << "T: " << ref.getT() << std::endl;
+	for (unsigned int i = 0; i < ref.size(); i++)
+		std::cout << "T[" << i << "] : " << (ref.getT())[i] << std::endl;
 	return (o);
 }
 
