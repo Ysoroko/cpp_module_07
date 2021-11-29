@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 17:12:03 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/11/29 11:39:27 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/11/29 12:13:51 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Array
 		{
 			T	*ref_t = ref.getT();
 			_t = new T[_n];
-			for (int i = 0; i < _n; i++)
+			for (unsigned int i = 0; i < _n; i++)
 				_t[i] = ref_t[i];
 		}
 
@@ -49,16 +49,18 @@ class Array
 			this->_n = ref.size();
 			delete [] this->_t;
 			this->_t = new T[_n];
-			for (int i = 0; i < _n; i++)
+			for (unsigned int i = 0; i < _n; i++)
 				_t[i] = ref_t[i];
 			return (*this);
 		}
 
 		// [] operator
-		T	& operator[](unsigned int i)
+		T	& operator[](int i)
 		{
-			if (i < 0 || i > this->_n)
+			if (i < 0 || i >= static_cast<int>(this->_n))
+			{
 				throw (std::exception());
+			}
 			else
 				return (*(_t + i));
 		}
