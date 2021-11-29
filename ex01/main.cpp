@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 16:47:41 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/14 17:10:40 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/11/29 11:23:30 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int main(void)
 {
 	int			iarr[4] = {0, 1, 2, 3};
-	char		carr[5] = "0123";
-	float		farr[4] = {0.0f, 1.0f, 2.0f, 3.0f};
+	char		carr[5] = "abcd";
+	float		farr[4] = {0.1f, 2.3f, 4.5f, 6.7f};
 	std::string	sarr[4] = {"OK", "KO", "OO", "KK"};
 
 	// INT
