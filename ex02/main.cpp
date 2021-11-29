@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 16:47:41 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/14 18:04:48 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/11/29 11:45:32 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,12 @@
 static void	ft_tests( void )
 {
 	// Empty
+	std::cout << std::endl << "Empty array" << std::endl;
+	std::cout << "----------------------------" << std::endl;
 	Array<int>	arr;
+	std::cout << arr[0] << std::endl;
+	//int * a = new int();
+	//std::cout << *a << std::endl;
 	try
 	{
 		arr[4] = 4;
@@ -27,6 +32,8 @@ static void	ft_tests( void )
 	std::cout << arr << std::endl;
 
 	// INT
+	std::cout << std::endl << "Int array" << std::endl;
+	std::cout << "----------------------------" << std::endl;
 	Array<int> narr(4);
 	std::cout << narr << std::endl;
 	narr[0] = 8;
@@ -36,6 +43,8 @@ static void	ft_tests( void )
 	std::cout << narr << std::endl;
 
 	// CHAR
+	std::cout << std::endl << "Char array" << std::endl;
+	std::cout << "----------------------------" << std::endl;
 	Array<char> carr(4);
 	std::cout << narr << std::endl;
 	carr[0] = 'a';
@@ -44,6 +53,8 @@ static void	ft_tests( void )
 	std::cout << carr << std::endl;
 
 	// FLOAT
+	std::cout << std::endl << "Float array" << std::endl;
+	std::cout << "----------------------------" << std::endl;
 	Array<float> farr(4);
 	std::cout << narr << std::endl;
 	farr[0] = 3.14f;
@@ -53,6 +64,8 @@ static void	ft_tests( void )
 	std::cout << carr << std::endl;
 
 	// STRING
+	std::cout << std::endl << "String array" << std::endl;
+	std::cout << "----------------------------" << std::endl;
 	Array<std::string> sarr(4);
 	std::cout << narr << std::endl;
 	sarr[0] = "First string";

@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 17:12:03 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/10/14 18:03:04 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/11/29 11:39:27 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ class Array
 		Array( )
 		{
 			_n = 0;
-			_t = NULL;
+			_t = new T[1];
+			_t[0] = 0;
 		}
 		Array( unsigned int n ) : _n(n) { _t = new T[n];}
 		// Copy constructor (Deep copy)
